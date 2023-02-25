@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Cyberpunk';
-    src: url(fonts/CyberpunkWaifus.ttf);
+  font-family: 'Cyberpunk';
+  src: url(fonts/CyberpunkWaifus.ttf);
 }
 
 * {
@@ -19,7 +19,6 @@ body {
   color: #FE8019;
 }
 
-
 h3 {
   font-size: 24px;
 }
@@ -27,6 +26,8 @@ h3 {
 li {
   margin-bottom: 10px;
   font-size: 16px;
+  text-align: center;
+  padding-right: 40px;
 }
 
 ul {
@@ -39,7 +40,6 @@ a{
   text-decoration: none;
 }
 
-
 .container {
   display: flex;
   justify-content:center;
@@ -48,21 +48,21 @@ a{
 .linkbox {
   display: flex;
   flex-direction: column;
-  padding: 25px;
-  margin: 50px;
-  align-items: center;
-  border: 5px solid #D3869B;
-  transition: flex 0.7s ease-in;
 }
 
 .linkbox h3 {
-  opacity: 0;
+  border: 5px solid #D3869B;
+  padding: 25px;
+  margin: 50px;
+  background-color: #D3869B;
+  color: #282828;
+  overflow: hidden;
 }
 
-.linkbox li {
+.linkbox ul {
   opacity: 0;
+  pointer-events: none;
 }
-
 
 .linkbox.active {
   display: flex;
@@ -71,19 +71,24 @@ a{
   margin: 50px;
   align-items: center;
   border: 5px solid #D3869B;
-  transition: flex 0.7s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.linkbox.active ul,li {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  background:none;
+}
+
+.linkbox.active ul {
+  pointer-events: all;
 }
 
 .linkbox.active h3 {
-  opacity: 100;
+  background-color: #282828;
+  color: #D3869B;
+  border: none;
+  padding: 0;
+  padding-top: 5px;
 }
 
-.linkbox.active li {
-  opacity: 100;
-}
-
-
-li {
-  text-align: center;
-  padding-right: 40px;
-}
