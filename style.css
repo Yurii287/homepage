@@ -48,6 +48,7 @@ a{
 .linkbox {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .linkbox h3 {
@@ -63,6 +64,7 @@ a{
   opacity: 0;
   pointer-events: none;
 }
+
 
 .linkbox.active {
   display: flex;
@@ -91,4 +93,3 @@ a{
   padding: 0;
   padding-top: 5px;
 }
-
